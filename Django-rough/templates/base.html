@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="">
+</head>
+<body>
+    <header>
+    {% if user.is_authenticated %}
+        <h1><a href="{% url 'home' %}">Blog App</a></h1>
+        <p>Hi {{ user.username }}</p>
+        <a href="{% url 'page' %}">Logout</a>
+        <h1><a href="{% url 'create-post' %}">+ ADD NEW POST</a></h1>
+    </header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Settings</li>
+             </ul>
+        </nav>
+    {% else %}
+        <p>You Are Not Logged In</p>
+        <a href="{% url 'login' %}">LogIn</a>
+        <a href="{% url 'signUp' %}">SignUp</a>
+    {% endif %}
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+->CREATE A SEPARATE CLASS FOR TAG 
+
+class Tag(models.Model):
+    name=models.CharField(max_length=200)
+    created=models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+->USE  MANY TO MANY FIELD TO CONNECT THERE
+tag=models.ManyToManyField(Tag,blank=True)
+
+->TO ACCESS THE TAGS NOW USE
+     {% for job_tag in jobs.tag.all %}
+         <span>{{job_tag.name}}</span>
+      {% endfor %}

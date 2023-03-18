@@ -1,0 +1,7 @@
+what is a software,software engg challenges faced by se?
+attributes/characteristic og good software
+application of software
+diff btw program and software product
+software process SDLC/software Process Model--> Waterfall model,Agile Process And Types(Scrum,kanban,lean,xp),Spiral
+
+

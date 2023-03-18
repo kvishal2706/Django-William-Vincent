@@ -1,0 +1,5 @@
+-> pip install django-filter
+
+-> add 'django_filters to settings.py
+
+->create a filters.py file and import django_filters

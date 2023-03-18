@@ -1,0 +1,17 @@
+body{
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 18px;
+}
+
+header h1 a{
+    color: rgb(253, 2, 2);
+    text-decoration: none;
+}
+
+h2{
+    background-color: blue;
+}
+
+.post-entry h2{
+    color: aqua;
+}
